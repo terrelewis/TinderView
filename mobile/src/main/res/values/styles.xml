@@ -4,6 +4,7 @@
     <style name="AppTheme" parent="AppTheme.Base">
 
     </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <!--Setting Theme for pre-lollipop -->
     <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
@@ -11,6 +12,7 @@
         <!--   darker variant for the status bar and contextual app bars -->
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorControlHighlight">@android:color/white</item>
+
     </style>
 
     <!--this properties set for Toolbar-->
@@ -19,5 +21,7 @@
         <item name="android:textColorSecondary">#fff</item>
 
     </style>
+    <style name="AppThemeCustom..PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

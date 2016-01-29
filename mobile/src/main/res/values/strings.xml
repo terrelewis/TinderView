@@ -16,5 +16,7 @@
     <string name="tab1">Connect</string>
     <string name="tab2">Discover</string>
     <string name="tab3">Chat</string>
+    <string name="no_internet_dialogue">You don\'t have internet connection. Please connect with internet and come back</string>
+    <string name="no_internet_head">No Internet</string>
 
 </resources>

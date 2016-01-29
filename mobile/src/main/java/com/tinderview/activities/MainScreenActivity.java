@@ -45,14 +45,20 @@ public class MainScreenActivity extends AppCompatActivity {
     private MainScreenPagerAdapter mMainScreenPagerAdapter;
     //Data
     private int PAGE_COUNT = 3;
-
-
+public String lati;
+    public String longi;
+    Bundle bundle=new Bundle();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         Log.i(TAG, "MainScreenActivity: onCreate()");
         context = this;
+        lati= getIntent().getStringExtra("Lat");
+        longi= getIntent().getStringExtra("Long");
+
+        bundle.putString("Lat", lati);
+        bundle.putString("Long", longi);
         //using sharedPreference to check whether this is using first time on not...
         //even this app is starting first time than from here it will call the OnBoardActivity and updated the value
         //even this app is already started than this screen will work...
@@ -187,7 +193,12 @@ public class MainScreenActivity extends AppCompatActivity {
         public Fragment getItem(int pos) {
             switch (pos) {
                 case 0:
-                    return new Connect();
+                   // return new Connect(lati, longi);
+                   // return new Connect();
+                    Connect con=new Connect();
+                   con.setArguments(bundle);
+                    return con;
+
                 case 1:
                     return new Discover();
                 case 2:

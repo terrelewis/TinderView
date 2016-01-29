@@ -4,7 +4,7 @@
 
     //ripple color for Tabs
     <color name="white_transparent">#77ffffff</color>
-
+    <color name="splashProgress">#fff203</color>
     //color for background
     <color name="background">#e6e6e6</color>
 
