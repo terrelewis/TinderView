@@ -3,6 +3,7 @@ package com.tinderview.activities;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.multidex.MultiDex;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
@@ -48,6 +49,12 @@ public class MainScreenActivity extends AppCompatActivity {
 public String lati;
     public String longi;
     Bundle bundle=new Bundle();
+
+    @Override
+    protected void attachBaseContext(Context base)
+    { super.attachBaseContext(base); MultiDex.install(this);
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

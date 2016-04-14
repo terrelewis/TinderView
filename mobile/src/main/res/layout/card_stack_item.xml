@@ -8,7 +8,7 @@
     android:layout_gravity="center_horizontal|top">
 
     <!--in center of card it's display the number of CardStack-->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -16,19 +16,101 @@
         android:id="@+id/helloText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textColor="@android:color/black"
-        android:textSize="40sp"
-        tools:text="@string/hello_world" />
+     android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="30sp"
+        tools:text="@string/hello_world"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:paddingBottom="15dip"
+        android:paddingTop="30dip"
+
+
+        />
+        <View style="@style/Divider"
+            android:layout_below="@+id/helloText"
+            android:id="@+id/line1"/>
+        <TextView
+            android:id="@+id/cuisine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            tools:text="cuisine"
+            android:textStyle="normal"
+            android:textAllCaps="true"
+
+
+            android:layout_below="@+id/line1"
+
+            />
+        <View style="@style/Divider"
+            android:layout_below="@+id/cuisine"
+            android:id="@+id/line2"
+            />
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="300dip"
+        android:layout_height="300dip"
         android:id="@+id/restimg"
-        android:layout_gravity="fill"
+        android:layout_below="@+id/line2"
+        android:layout_centerInParent="true"
+
         
         />
+        <View style="@style/Divider"
+            android:layout_below="@+id/restimg"
+            android:id="@+id/line3"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/line3"
+            android:layout_centerInParent="true"
+            android:id="@+id/avg">
+        <TextView
+            android:id="@+id/avgcosttxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            tools:text="Average cost for two:  "
+            android:textStyle="normal"
+   />
 
-</LinearLayout>
+            <TextView
+                android:id="@+id/avgcost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="15sp"
+                tools:text="nvn"
+                android:textStyle="normal"
+
+
+                />
+
+        </LinearLayout>
+        <View style="@style/Divider"
+            android:layout_below="@+id/avg"
+            android:id="@+id/line4"
+            />
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:id="@+id/rating"
+            android:layout_below="@+id/line4"
+            android:clickable="false"
+
+            />
+
+</RelativeLayout>
 
     <!--  this view will indicate to user that you are swapping this card into left side-->
     <View

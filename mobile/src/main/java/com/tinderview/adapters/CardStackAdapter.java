@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -57,8 +58,18 @@ public class CardStackAdapter extends ArrayAdapter<restaurant_detail> {
         //supply the layout for your card
         restaurant_detail restaurantDetail=getItem(position);
         TextView v = (TextView) (contentView.findViewById(R.id.helloText));
+        TextView c = (TextView) (contentView.findViewById(R.id.cuisine));
+        TextView avg = (TextView) (contentView.findViewById(R.id.avgcost));
+        TextView avgtxt = (TextView) (contentView.findViewById(R.id.avgcosttxt));
         final ImageView iv=(ImageView)(contentView.findViewById(R.id.restimg));
+        RatingBar r=(RatingBar)(contentView.findViewById(R.id.rating));
         v.setText(restaurantDetail.getRestname());
+        c.setText(restaurantDetail.getRestcuisine());
+        avg.setText(restaurantDetail.getAvgtwocost());
+        avgtxt.setText("Average cost for two:  ");
+        r.setRating(Float.parseFloat(restaurantDetail.getRestrating()));
+        r.setClickable(false);
+
         ImageLoader imageLoader = AppController.getInstance().getImageLoader();
 
 // If you are using normal ImageView

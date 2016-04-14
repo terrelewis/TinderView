@@ -212,20 +212,23 @@ JSONObject obj;
             JSONObject obje=jsonArray.getJSONObject(i);
             restaurant_detail rd = new restaurant_detail();
 
-            String rn, ru;
+            String rn, ru, rr, rc, rav;
 
 
 
 
                 JSONObject ob= obje.getJSONObject("restaurant");
+            JSONObject ob1=ob.getJSONObject("user_rating");
             rn=ob.getString("name");
-
+                rc=ob.getString("cuisines");
                 ru= ob.getString("featured_image");
-
-
+rav=ob.getString("average_cost_for_two");
+rr=ob1.getString("aggregate_rating");
                 rd.setRestname(rn);
                 rd.setImgurl(ru);
-
+            rd.setRestcuisine(rc);
+rd.setRestrating(rr);
+            rd.setAvgtwocost(rav);
 
                 listData.add(rd);
 
