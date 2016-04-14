@@ -1,3 +1,10 @@
+Update 14/04/2016:
+-Made use of the TinderView project to implement swipeable cardstack efficiently.
+-Enabled displaying the profiles of restaurants based on the user's current location in the form of swipeable cards. Profiles of restaurants are retrieved using the Zomato API
+-Enabled Fb login at the start of the app
+
+
+
 TinderView
 ========
 
